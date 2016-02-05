@@ -1,0 +1,33 @@
+<div class="author form-group margin-b-20">
+  <h4 class="text-right" ng-bind="book.author.name"></h4>
+  <img ng-src="{{book.author.avatar}}" alt="{{book.author.name}}" class="img-circle">
+  <div class="clearfix"></div>
+</div>
+
+<div class="form-group margin-b-20">
+  <label>Description</label>
+  <div ng-bind="book.description"></div>
+  <div class="clearfix"></div>
+</div>
+
+<div class="form-group margin-b-20 categories">
+  <label>Category</label>
+  <div ng-bind="book.genre.category"></div>
+  <div class="clearfix"></div>
+</div>
+
+<div class="form-group margin-b-20">
+  <label>Genre</label>
+  <div ng-bind="book.genre.name"></div>
+</div>
+
+<div class="form-group margin-b-20">
+  <label>Publish date</label>
+  <div ng-bind="book.published | date : 'medium'"></div>
+</div>
+
+<div class="row">
+  <div class="form-group margin-b-20 col-md-offset-1 col-md-10">
+    <img ng-src="{{book.cover}}" class="img-responsive cover" alt="{{book.name}}">
+  </div>
+</div>

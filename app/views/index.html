@@ -1,0 +1,48 @@
+<div class="row" ng-init="initBooks()">
+  <div class="left-side col-sm-3 col-xs-12">
+
+    <h1>Reedsy Interview App</h1>
+
+    <div class="clearfix"></div>
+
+    <div class="form-group">
+      <input type="search" class="form-control search" ng-model="filters.name" placeholder="Search title or author...">
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="form-group categories">
+      <label>Category</label>
+      <a href ng-repeat="(label, value) in categories" ng-class="{active:value==filters.category}" ng-click="filters.category=value" class="col-xs-12">
+        <i class="glyphicon glyphicon-chevron-right"></i>
+        <span ng-bind="label"></span>
+      </a>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="form-group">
+      <label>Genre</label>
+      <div class="genres margin-b-20">
+        <a href ng-repeat="(label, value) in genres" ng-class="{active:value==filters.genre}" ng-bind="label" ng-click="filters.genre=value"></a>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="right-side col-sm-9 col-xs-12">
+    <div ng-if="error" class="alert alert-danger" role="alert" ng-bind="error"></div>
+    <div class="books margin-b-20">
+      <div class="book col-sm-4" ng-repeat="book in (filteredBooks = (books | filterBooks: filters)) | limitTo: p.itemsPerPage : (p.page-1)*p.itemsPerPage" ui-sref="books.show({id: book.id})" ng-include="'/views/book-small.html'">
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="text-center" ng-if="filteredBooks.length">
+      Showing <span ng-bind="filteredBooks.length"></span> item<span ng-if="filteredBooks.length>1">s</span>.
+    </div>
+    <div ng-if="!filteredBooks.length && books.length">No items to display.</div>
+
+    <uib-pagination ng-if="filteredBooks.length > p.itemsPerPage" total-items="filteredBooks.length" ng-model="p.page" items-per-page="p.itemsPerPage" max-size="5" boundary-link-numbers="true" rotate="true" force-ellipses="true">
+      
+    </uib-pagination>
+  </div>
+</div>

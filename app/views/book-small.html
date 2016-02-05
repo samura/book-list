@@ -1,0 +1,8 @@
+<img ng-src="{{book.cover}}?{{book.id}}" class="img-responsive" alt="{{book.name}}">
+<div class="title"><div class="title-inner"><h3 ng-bind="book.name"></h3></div></div>
+<div class="foot">
+  <div class="author">By <span ng-bind="book.author.name"></span></div>
+  <div class="clearfix"></div>
+  <time class="pull-left" am-time-ago="book.published"></time> 
+  <div class="likes pull-right"> <span ng-bind="book.likes"></span> <i class="glyphicon glyphicon-heart"></i></div>
+</div>

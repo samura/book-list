@@ -1,0 +1,236 @@
+/**
+* 1. base
+* 2. index
+* 3. smallbook
+* 4. show
+* 5. animations
+**/
+
+/* 1. base */
+h1 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+label {
+  color: #999;
+}
+a:focus, a:hover {
+  color: #23527c;
+  text-decoration: none;
+}
+.left-side {
+  -webkit-box-shadow: 0 0 5px #555;
+  box-shadow: 0 0 5px #555;
+  z-index: 1;
+}
+.right-side {
+  padding: 0;
+}
+.margin-b-20 {
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  html, 
+  body,
+  .container-fluid,
+  .container-fluid > .row {
+    height: 100%;
+    overflow: hidden;
+  }
+  .left-side,
+  .right-side {
+    height: 100%;
+    overflow: auto;
+  }
+}
+
+/* 2. index */
+.form-control.search {
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.form-control.search:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.left-side .categories i {
+  opacity: 0;
+}
+.left-side .categories .active i {
+  opacity: 1;
+}
+.genres a {
+  color: #333;
+  padding: 5px 10px;
+  border: 1px solid #333;
+  margin: 0 5px 5px 0;
+  float: left;
+  font-size: 10px;
+}
+.genres a:hover {
+  text-decoration: none;
+}
+.genres a.active {
+  color: #337ab7;
+  border: 1px solid #337ab7;
+  text-decoration: none;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+.pagination {
+  display: table;
+  margin: 10px auto 40px;
+}
+
+/* 3. small book */
+.book {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  border: 1px solid rgb(51,51,51);
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 5px #555;
+  box-shadow: 0 0 5px #555;
+}
+.book .title,
+.book .foot {
+  position: absolute;
+  color: white;
+}
+
+.book .title {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.book .title .title-inner {
+  display: table;
+  width: 100%;
+  background: rgba(51,51,51, .5);
+  -webkit-box-shadow: 0 0 5px rgba(51,51,51,.5);  
+  box-shadow: 0 0 5px rgba(51,51,51,.5);
+  padding: 20px 40px;
+  min-height: 50%;
+}
+.book .title .title-inner h3 {
+  display: table-cell;
+  margin: 0;
+  vertical-align: middle;
+}
+.book .foot {
+  background: rgba(51,51,51, .5);
+  width: 100%;
+  bottom: 0;
+  padding: 20px;
+}
+.book .author span {
+  font-style: italic;
+  font-weight: 800;
+}
+.book img {
+  width: 100%;
+}
+.book:hover .glyphicon-heart {
+  color: #F00;
+  animation: beat .5s infinite alternate;
+  transform-origin: center;
+}
+@media (min-width: 768px) {
+  .book .title .title-inner h3 {
+    font-size: 17px;
+  }
+  .book .title .title-inner {
+    transition: all 0.5s ease;
+    min-height: 25%;
+  }
+  .book:hover .title .title-inner {
+    min-height: 50%;
+  }
+  .book:hover .title {
+    min-height: 25%;
+  }
+  .book .foot {
+    transition: all .5s ease;
+    bottom: -100px;
+    opacity: 0;
+  }
+  .book:hover .foot {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+@media (min-width: 992px)
+{
+  .book .title .title-inner h3 {
+    font-size: 24px;
+  }
+}
+
+/* 4. show */
+.full-book .col-sm-12 {
+  padding: 20px 40px 40px;
+}
+.show-wrapper .author {
+  min-height: 70px;
+  position: relative;
+  width: 100%;
+  display: table;
+}
+.author h4{
+  min-height: 60px;
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 90px;
+  word-break: break-word;
+}
+.author img {
+  width: 70px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.full-book .likes {
+  margin-top: 20px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+.full-book .book .likes {
+  margin-top: 0;
+}
+.full-book .likes .panel-body {
+  padding: 5px 10px;
+}
+.full-book .glyphicon-heart {
+  color: #f00;
+}
+.full-book .likes:hover .glyphicon {
+  animation: beat .5s infinite alternate;
+  transform-origin: center;
+}
+.cover {
+  -webkit-box-shadow: 0 0 5px #555;
+  box-shadow: 0 0 5px #555;
+}
+.more-books {
+  background: #eee;
+  padding: 40px;
+}
+.more-books h4 {
+  margin-bottom: 40px;
+}
+.xs-info {
+  margin-top: 40px;
+}
+
+/* 5. animations */
+@keyframes beat{
+  to { transform: scale(1.4); }
+}
