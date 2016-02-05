@@ -173,6 +173,9 @@ a:focus, a:hover {
     font-size: 24px;
   }
 }
+.well {
+  background: none;
+}
 
 /* 4. show */
 .full-book .col-sm-12 {

@@ -39,7 +39,7 @@
     <div class="text-center" ng-if="filteredBooks.length">
       Showing <span ng-bind="filteredBooks.length"></span> item<span ng-if="filteredBooks.length>1">s</span>.
     </div>
-    <div ng-if="!filteredBooks.length && books.length">No items to display.</div>
+    <div class="col-sm-8 col-sm-offset-2 well text-center" ng-if="!filteredBooks.length && books.length">No items to display.</div>
 
     <uib-pagination ng-if="filteredBooks.length > p.itemsPerPage" total-items="filteredBooks.length" ng-model="p.page" items-per-page="p.itemsPerPage" max-size="5" boundary-link-numbers="true" rotate="true" force-ellipses="true">
       
