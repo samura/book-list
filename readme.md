@@ -9,8 +9,8 @@
 
 
 ## Out of scope
-Since the job description does not require backend, i'll only focus on the angularjs, loading the entire json on controller load.
-I decided to use frontend pagination to be easier to find similar readings.
+Since the job description does not require backend expertise, i'll only focus on the angularJs, fetching the entire json on load.
+I decided to use frontend pagination to be easier to find similar readings, since the json is already fully loaded.
 
 
 ## Requirements
@@ -18,7 +18,7 @@ I decided to use frontend pagination to be easier to find similar readings.
 
 
 ## Instalation
-This show be enough to get everything installed and server running. If you get permissions errors, please run `sudo npm start` instead.
+This show be enough to get everything installed and server running.
 ```bash
 git clone https://github.com/samura/book-list.git
 cd book-list
