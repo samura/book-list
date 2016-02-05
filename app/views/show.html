@@ -33,7 +33,7 @@
     <div class="more-books">
       <h4 class="text-center margin-b-20">
         Similar Reading<br/>
-        <small>If you liked this book, we recommend you check this emerging titles</small>
+        <small>If you liked this book, we recommend you check these emerging titles</small>
       </h4>
 
       <div class="book col-sm-4" ng-repeat="book in (filteredBooks = (books | filterBooks: filters)) | limitTo:3" ui-sref="books.show({id: book.id})" ng-include="'/views/book-small.html'"></div>

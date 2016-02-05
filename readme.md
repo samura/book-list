@@ -1,7 +1,7 @@
 
 ## Objectives
 - responsive and atractive design
-- clear separation of VC
+- clear separation of viewer/controller
 - creation of a filter (same filter applies to list and show, on "Similar Readings")
 - reusable templates (book-small.html and info.html)
 - use of ui-router
@@ -18,7 +18,7 @@ I decided to use frontend pagination to be easier to find similar readings.
 
 
 ## Instalation
-This show be enought to get everything installed and server running. If you get permissions errors, please run `sudo npm start` instead.
+This show be enough to get everything installed and server running. If you get permissions errors, please run `sudo npm start` instead.
 ```bash
 git clone https://github.com/samura/book-list.git
 cd book-list
