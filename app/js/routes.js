@@ -13,7 +13,7 @@ angular.module('reedsy').config([
       url: '/',
       views: {'@': {
         controller: 'BookController',
-        templateUrl: '/views/index.html'
+        templateUrl: 'views/index.html'
       }}
     })
       .state('books.show', {

@@ -31,7 +31,7 @@
   <div class="right-side col-sm-9 col-xs-12">
     <div ng-if="error" class="alert alert-danger" role="alert" ng-bind="error"></div>
     <div class="books margin-b-20">
-      <div class="book col-sm-4" ng-repeat="book in (filteredBooks = (books | filterBooks: filters)) | limitTo: p.itemsPerPage : (p.page-1)*p.itemsPerPage" ui-sref="books.show({id: book.id})" ng-include="'/views/book-small.html'">
+      <div class="book col-sm-4" ng-repeat="book in (filteredBooks = (books | filterBooks: filters)) | limitTo: p.itemsPerPage : (p.page-1)*p.itemsPerPage" ui-sref="books.show({id: book.id})" ng-include="'views/book-small.html'">
       </div>
       <div class="clearfix"></div>
     </div>
