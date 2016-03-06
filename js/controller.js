@@ -13,7 +13,7 @@ angular.module('reedsy').controller('BookController', [
     $scope.filters = {category: undefined, genre: undefined};
 
     $scope.initBooks = function(callback) {
-      $http.get('/data/book.json')
+      $http.get('data/book.json')
         .success(
         function(books){
           $scope.books = books;
